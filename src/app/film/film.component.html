@@ -1,0 +1,16 @@
+<li [ngClass]=" {'list-group-item': true,
+                  'list-group-item-info' : filmOnAir == 'Tank',
+                  'list-group-item-success': filmOnAir == 'Healer',
+                  'list-group-item-danger': filmOnAir == 'DPS' }">
+
+        <div class="row">
+            <div class="col-2"><img class="affiche" [src]="filmAffiche" alt=""></div>
+            <div class="col-8"> <h3 [ngStyle]="{color: changeColor()}">Job: {{ filmName }} -- Rôle : {{ getOnAir() }}</h3>
+   
+          
+                <a [routerLink]="['/modif', id]" class="btn btn-outline-warning">M</a> &nbsp; 
+                <button class="btn btn-outline-danger">X</button>
+            </div>
+        </div>
+   
+</li>

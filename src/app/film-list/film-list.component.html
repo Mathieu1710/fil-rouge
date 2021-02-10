@@ -1,0 +1,9 @@
+<ul class="list-group">
+  <app-film *ngFor="let tmp of films; let i = index" 
+  [filmName]="tmp.name" 
+  [filmOnAir]="tmp.onAir" 
+  [filmAffiche]="tmp.affiche" 
+  [index]="i"
+  [id]="tmp.id">
+</app-film>
+</ul>
